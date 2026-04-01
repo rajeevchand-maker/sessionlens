@@ -1,0 +1,27 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#07111F"/>
+  <circle cx="180" cy="120" r="180" fill="#4EB4E8" fill-opacity="0.16"/>
+  <circle cx="1120" cy="120" r="140" fill="#80D8FF" fill-opacity="0.14"/>
+  <rect x="56" y="56" width="1168" height="528" rx="34" fill="#0D1B2D" fill-opacity="0.9" stroke="#6EA7FF" stroke-opacity="0.2" stroke-width="2"/>
+
+  <text x="104" y="122" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="18" letter-spacing="3">SESSIONLENS</text>
+  <text x="104" y="218" fill="#EEF3F8" font-family="Georgia, serif" font-size="66" font-weight="700">Session observability</text>
+  <text x="104" y="290" fill="#EEF3F8" font-family="Georgia, serif" font-size="66" font-weight="700">for Claude Code teams</text>
+  <text x="104" y="350" fill="#9EB1C7" font-family="Georgia, serif" font-size="28">Local-first analytics, safe synthetic demo data, and README-first customization.</text>
+
+  <rect x="104" y="420" width="240" height="92" rx="22" fill="#132844"/>
+  <text x="132" y="456" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="15" letter-spacing="2">SAFE DEMO MODE</text>
+  <text x="132" y="492" fill="#EEF3F8" font-family="Georgia, serif" font-size="34" font-weight="700">12 sessions</text>
+
+  <rect x="368" y="420" width="240" height="92" rx="22" fill="#132844"/>
+  <text x="396" y="456" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="15" letter-spacing="2">AGENT USAGE</text>
+  <text x="396" y="492" fill="#EEF3F8" font-family="Georgia, serif" font-size="34" font-weight="700">83%</text>
+
+  <rect x="632" y="420" width="240" height="92" rx="22" fill="#132844"/>
+  <text x="660" y="456" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="15" letter-spacing="2">TOP WORKLOAD</text>
+  <text x="660" y="492" fill="#EEF3F8" font-family="Georgia, serif" font-size="34" font-weight="700">northstar-api</text>
+
+  <rect x="896" y="420" width="280" height="92" rx="22" fill="#132844"/>
+  <text x="924" y="456" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="15" letter-spacing="2">CUSTOMIZE WITH AI</text>
+  <text x="924" y="492" fill="#EEF3F8" font-family="Georgia, serif" font-size="34" font-weight="700">Claude / Codex ready</text>
+</svg>

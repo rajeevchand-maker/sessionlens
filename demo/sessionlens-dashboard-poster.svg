@@ -1,0 +1,41 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#07111F"/>
+  <circle cx="210" cy="120" r="240" fill="#4EB4E8" fill-opacity="0.16"/>
+  <circle cx="1380" cy="120" r="180" fill="#80D8FF" fill-opacity="0.12"/>
+  <rect x="72" y="64" width="1456" height="772" rx="36" fill="#0D1B2D" fill-opacity="0.86" stroke="#4F7EC4" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="112" y="126" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="18" letter-spacing="2.8">SESSIONLENS</text>
+  <text x="112" y="196" fill="#EEF3F8" font-family="Georgia, serif" font-size="70" font-weight="700">Local-first observability for</text>
+  <text x="112" y="272" fill="#EEF3F8" font-family="Georgia, serif" font-size="70" font-weight="700">Claude Code workflows</text>
+  <text x="112" y="324" fill="#9EB1C7" font-family="Georgia, serif" font-size="28">Synthetic demo mode built for safe screenshots, product storytelling, and AI-assisted adaptation.</text>
+
+  <rect x="112" y="378" width="300" height="120" rx="24" fill="#132844" stroke="#6EA7FF" stroke-opacity="0.18"/>
+  <text x="140" y="420" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="16" letter-spacing="2">DEMO SESSIONS</text>
+  <text x="140" y="474" fill="#EEF3F8" font-family="Georgia, serif" font-size="44" font-weight="700">12 safe fixtures</text>
+
+  <rect x="430" y="378" width="300" height="120" rx="24" fill="#132844" stroke="#6EA7FF" stroke-opacity="0.18"/>
+  <text x="458" y="420" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="16" letter-spacing="2">AGENT INVOLVEMENT</text>
+  <text x="458" y="474" fill="#EEF3F8" font-family="Georgia, serif" font-size="44" font-weight="700">83%</text>
+
+  <rect x="748" y="378" width="300" height="120" rx="24" fill="#132844" stroke="#6EA7FF" stroke-opacity="0.18"/>
+  <text x="776" y="420" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="16" letter-spacing="2">FRICTION RATE</text>
+  <text x="776" y="474" fill="#EEF3F8" font-family="Georgia, serif" font-size="44" font-weight="700">58%</text>
+
+  <rect x="1066" y="378" width="350" height="120" rx="24" fill="#132844" stroke="#6EA7FF" stroke-opacity="0.18"/>
+  <text x="1094" y="420" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="16" letter-spacing="2">ESTIMATED DEMO SPEND</text>
+  <text x="1094" y="474" fill="#EEF3F8" font-family="Georgia, serif" font-size="44" font-weight="700">$1.40</text>
+
+  <text x="112" y="566" fill="#80D8FF" font-family="IBM Plex Mono, Menlo, monospace" font-size="16" letter-spacing="2">PRODUCT STORY</text>
+  <text x="112" y="610" fill="#EEF3F8" font-family="Georgia, serif" font-size="38" font-weight="700">From session ingest to meaningful workflow insight</text>
+
+  <rect x="112" y="648" width="408" height="124" rx="24" fill="#10233B" stroke="#7DD8FF" stroke-opacity="0.18"/>
+  <text x="142" y="690" fill="#EEF3F8" font-family="Georgia, serif" font-size="30" font-weight="700">Synthetic ingest pipeline</text>
+  <text x="142" y="732" fill="#9EB1C7" font-family="Georgia, serif" font-size="23">No real prompts, paths, transcripts, or ticket overlays.</text>
+
+  <rect x="548" y="648" width="408" height="124" rx="24" fill="#10233B" stroke="#7DD8FF" stroke-opacity="0.18"/>
+  <text x="578" y="690" fill="#EEF3F8" font-family="Georgia, serif" font-size="30" font-weight="700">Metrics that travel well</text>
+  <text x="578" y="732" fill="#9EB1C7" font-family="Georgia, serif" font-size="23">Projects, tools, cost, friction, and agent usage stay understandable.</text>
+
+  <rect x="984" y="648" width="432" height="124" rx="24" fill="#10233B" stroke="#7DD8FF" stroke-opacity="0.18"/>
+  <text x="1014" y="690" fill="#EEF3F8" font-family="Georgia, serif" font-size="30" font-weight="700">AI-readable by design</text>
+  <text x="1014" y="732" fill="#9EB1C7" font-family="Georgia, serif" font-size="23">README, schema, and customization points are ready for Claude or Codex.</text>
+</svg>

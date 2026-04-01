@@ -1,0 +1,32 @@
+{
+  "name": "sessionlens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first analytics and observability for Claude Code sessions and agent workflows.",
+  "author": "Rajeev Chand <rajeevchand@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeevchand-maker/sessionlens.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "next": "16.2.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.37",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.1",
+    "typescript": "5.9.3"
+  }
+}

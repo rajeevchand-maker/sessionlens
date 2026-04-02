@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { ingestSessions } from "@/lib/sessionlens/ingest";
 import { buildSessionAnalytics } from "@/lib/sessionlens/metrics";
+import type { IngestedSessionDataset, NormalizedSession } from "@/lib/sessionlens/types";
 
 describe("buildSessionAnalytics", () => {
   const analytics = buildSessionAnalytics(ingestSessions());
@@ -92,6 +93,92 @@ describe("buildSessionAnalytics", () => {
       { name: "MCP", sessions: 6, rate: 0.5 },
       { name: "Web Search", sessions: 4, rate: 0.33 },
       { name: "Web Fetch", sessions: 3, rate: 0.25 },
+    ]);
+  });
+
+  it("computes analytics from inline session data without depending on the demo fixtures", () => {
+    const dataset: IngestedSessionDataset = {
+      sourceId: "inline-fixture",
+      sourceLabel: "Inline fixture",
+      mode: "filesystem",
+      generatedAt: "2026-04-01T20:00:00Z",
+      sessions: [
+        {
+          id: "inline-1",
+          startedAt: "2026-03-29T09:00:00Z",
+          durationMinutes: 30,
+          workflowKind: "feature_delivery",
+          project: { id: "project-a", name: "project-a", area: "Backend" },
+          userTurns: 3,
+          assistantTurns: 6,
+          toolCounts: { read_file: 3, edit_file: 2 },
+          inputTokens: 1000,
+          outputTokens: 400,
+          cacheReadTokens: 200,
+          agentInvocations: 1,
+          capabilities: { taskAgent: true, mcp: false, webSearch: false, webFetch: false },
+          gitCommits: 1,
+          gitPushes: 0,
+          linesAdded: 15,
+          linesRemoved: 5,
+          filesModified: 2,
+          outcome: "shipped",
+          friction: "smooth",
+        },
+        {
+          id: "inline-2",
+          startedAt: "2026-03-29T12:00:00Z",
+          durationMinutes: 60,
+          workflowKind: "research",
+          project: { id: "project-b", name: "project-b", area: "Docs" },
+          userTurns: 4,
+          assistantTurns: 7,
+          toolCounts: { read_file: 1, web_fetch: 4 },
+          inputTokens: 2000,
+          outputTokens: 500,
+          cacheReadTokens: 300,
+          agentInvocations: 0,
+          capabilities: { taskAgent: false, mcp: false, webSearch: true, webFetch: true },
+          gitCommits: 0,
+          gitPushes: 0,
+          linesAdded: 4,
+          linesRemoved: 1,
+          filesModified: 1,
+          outcome: "research",
+          friction: "notable",
+        },
+      ] satisfies NormalizedSession[],
+    };
+
+    const inlineAnalytics = buildSessionAnalytics(dataset);
+
+    expect(inlineAnalytics.overview).toEqual({
+      totalSessions: 2,
+      totalTokens: 4400,
+      estimatedSpendUsd: 0.02,
+      averageDurationMinutes: 45,
+      agentSessionRate: 0.5,
+      frictionSessionRate: 0.5,
+    });
+    expect(inlineAnalytics.dailyActivity).toEqual([
+      {
+        date: "2026-03-29",
+        sessions: 2,
+        tokens: 4400,
+        agentSessions: 1,
+      },
+    ]);
+    expect(inlineAnalytics.projectSummaries.map((project) => project.id)).toEqual(["project-b", "project-a"]);
+    expect(inlineAnalytics.toolHighlights).toEqual([
+      { name: "read_file", invocations: 4, sessionCoverage: 2 },
+      { name: "web_fetch", invocations: 4, sessionCoverage: 1 },
+      { name: "edit_file", invocations: 2, sessionCoverage: 1 },
+    ]);
+    expect(inlineAnalytics.capabilityUsage).toEqual([
+      { name: "Task Agent", sessions: 1, rate: 0.5 },
+      { name: "Web Search", sessions: 1, rate: 0.5 },
+      { name: "Web Fetch", sessions: 1, rate: 0.5 },
+      { name: "MCP", sessions: 0, rate: 0 },
     ]);
   });
 });
